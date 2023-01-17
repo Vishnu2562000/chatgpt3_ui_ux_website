@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    /* Instead of using color codes everytime, we will 
+       create some variables with color codes in a 
+       separate file and use them everywhere */
+    background: var(--color-bg);
+}

@@ -1,0 +1,28 @@
+/* Import the Manrope font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Define the root element and set the font family */
+:root {
+  --font-family: 'Manrope', sans-serif;
+  
+  /* Define gradient for text */
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  
+  /* Define gradient for bar */
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+
+  /* Define background color */
+  --color-bg: #040C18;
+  
+  /* Define footer color */
+  --color-footer : #031B34;
+  
+  /* Define blog color */
+  --color-blog: #042c54;
+  
+  /* Define text color */
+  --color-text: #81AFDD;
+  
+  /* Define subtext color */
+  --color-subtext: #FF8A71;
+}
