@@ -9,6 +9,136 @@
 body {
     /* Instead of using color codes everytime, we will 
        create some variables with color codes in a 
-       separate file and use them everywhere */
+       separate file  and use them everywhere */
     background: var(--color-bg);
 }
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+/*
+    gradient__bg code sets the background of an element to a radial gradient.
+    The gradient starts with a color of rgba(0, 40, 83, 1) at the center and
+    transitions to a color of rgba(4, 12, 24, 1) at the edges.
+    The gradient is positioned at 3% from the left and 25% from the top.
+
+    https://angrytools.com/gradient/
+*/
+.gradient__bg {
+
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+}
+
+.gradient__text {
+    background:var(--gradient-text) ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+    padding: 4rem 6rem;
+}
+  
+.section__margin {
+    margin: 4rem 6rem;
+}
+
+/* Scale Up Center Animation
+
+It applies scale-up-center animation of duration 0.4s with cubic-bezier timing function
+to the element with class .scale-up-center. The animation is played both on hover and on
+leaving hover.The webkit-animation is used to support webkit-based browsers and the animation
+is used for other browsers.
+
+*/
+.scale-up-center {
+/* Animation for webkit-based browsers */
+-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+/* Animation for other browsers */
+animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/*
+Scale Up Center Animation Keyframes 
+It applies scale-up-center animation of keyframes used to increase the size of an element
+by scaling it up from 50% to 100%. The animation is defined in two parts,
+the starting point and the end point. At the starting point,
+the element is scaled down to 50% of its original size, and at the end point,
+it is scaled up to its original size.The webkit-transform is used for webkit-based browsers
+ and the transform is used for other browsers.
+
+https://animista.net/play/basic/scale-up
+*/
+@-webkit-keyframes scale-up-center {
+    /* Starting point of animation */
+    0% {
+      /* Transform for webkit-based browsers */
+      -webkit-transform: scale(0.5);
+      /* Transform for other browsers */
+      transform: scale(0.5);
+    }
+    /* End point of animation */
+    100% {
+      /* Transform for webkit-based browsers */
+      -webkit-transform: scale(1);
+      /* Transform for other browsers */
+      transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    /* Starting point of animation */
+    0% {
+      /* Transform for webkit-based browsers */
+      -webkit-transform: scale(0.5);
+      /* Transform for other browsers */
+      transform: scale(0.5);
+    }
+    /* End point of animation */
+    100% {
+      /* Transform for webkit-based browsers */
+      -webkit-transform: scale(1);
+      /* Transform for other browsers */
+      transform: scale(1);
+    }
+  }
+  
+/* For tabs */
+@media screen and (max-width: 700px) {
+    .section__padding {
+      padding: 4rem;
+    }
+  
+    .section__margin {
+      margin: 4rem;
+    }
+}
+  
+/* For Mobile Devices */
+@media screen and (max-width: 550px) {
+    .section__padding {
+      padding: 4rem 2rem;
+    }
+  
+    .section__margin {
+      margin: 4rem 2rem;
+    }  
+}
+  
+
